@@ -1,0 +1,1028 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNGINE'26 - Rules & Regulations</title>
+    <style>
+        @font-face {
+            font-family: 'Hacked';
+            src: url('assets/fonts/HACKED.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Amputa Bangiz';
+            src: url('assets/fonts/Amputa Bangiz.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'BlenderPro';
+            src: url('assets/fonts/BlenderPro-Medium.woff2') format('woff2');
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: 'BlenderPro';
+            src: url('assets/fonts/BlenderPro-Bold.woff2') format('woff2');
+            font-weight: 700;
+        }
+
+        :root {
+            --primary-dark: #0a0a0f;
+            --secondary-dark: #12121a;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #9d4edd;
+            --accent-magenta: #ff006e;
+            --accent-green: #39ff14;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'BlenderPro', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 2px solid var(--accent-cyan);
+            margin-bottom: 40px;
+        }
+
+        .header-logo {
+            width: 120px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 20px rgba(157, 78, 221, 0.5));
+        }
+
+        .event-title {
+            font-family: 'Hacked', sans-serif;
+            font-size: 4rem;
+            background: linear-gradient(135deg, #00d4ff, #9d4edd, #ff006e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 10px;
+        }
+
+        .event-subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-cyan);
+            letter-spacing: 3px;
+            margin: 10px 0;
+        }
+
+        .event-theme {
+            font-family: 'Amputa Bangiz', sans-serif;
+            font-size: 1.6rem;
+            color: var(--accent-purple);
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        .event-details {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .event-details span::before {
+            content: '>';
+            color: var(--accent-cyan);
+            margin-right: 8px;
+        }
+
+        .section {
+            background: var(--secondary-dark);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 8px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #00d4ff, #9d4edd, #ff006e);
+        }
+
+        .section-header {
+            background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), transparent);
+            padding: 18px 25px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-icon {
+            font-size: 1.4rem;
+        }
+
+        .section-title {
+            font-family: 'Hacked', sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent-cyan);
+            letter-spacing: 2px;
+        }
+
+        .section-content {
+            padding: 20px 25px;
+        }
+
+        .competition-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(157, 78, 221, 0.3);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .competition-header {
+            background: linear-gradient(90deg, rgba(157, 78, 221, 0.2), transparent);
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(157, 78, 221, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .competition-name {
+            font-family: 'Hacked', sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent-purple);
+            letter-spacing: 2px;
+        }
+
+        .competition-type {
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 15px;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .competition-body {
+            padding: 18px 20px;
+        }
+
+        .competition-desc {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .subsection {
+            margin: 20px 0;
+        }
+
+        .subsection-title {
+            font-family: 'Hacked', sans-serif;
+            font-size: 1rem;
+            color: var(--accent-cyan);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .rules-list {
+            list-style: none;
+        }
+
+        .rules-list li {
+            position: relative;
+            padding: 8px 0 8px 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            font-size: 0.95rem;
+        }
+
+        .rules-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rules-list li::before {
+            content: '//';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        .sub-rules {
+            margin: 8px 0 0 20px;
+        }
+
+        .sub-rules li::before {
+            content: '>';
+            color: var(--accent-purple);
+        }
+
+        .topic-box {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 6px;
+            padding: 12px 18px;
+            margin-bottom: 15px;
+        }
+
+        .topic-title {
+            font-family: 'Hacked', sans-serif;
+            color: var(--accent-cyan);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .topic-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .criteria-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .criteria-table th,
+        .criteria-table td {
+            padding: 10px 12px;
+            text-align: left;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .criteria-table th {
+            background: rgba(0, 212, 255, 0.1);
+            font-family: 'Hacked', sans-serif;
+            color: var(--accent-cyan);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .criteria-table td {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .contact-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(57, 255, 20, 0.3);
+            border-radius: 6px;
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        .contact-name {
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 5px;
+        }
+
+        .contact-phone {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .notice {
+            background: linear-gradient(90deg, rgba(255, 0, 110, 0.1), transparent);
+            border-left: 3px solid var(--accent-magenta);
+            padding: 12px 15px;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        .notice-title {
+            font-family: 'Hacked', sans-serif;
+            color: var(--accent-magenta);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            margin-top: 30px;
+        }
+
+        .footer-logo {
+            width: 70px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand {
+            font-family: 'Hacked', sans-serif;
+            font-size: 1.1rem;
+            color: var(--accent-cyan);
+            letter-spacing: 3px;
+        }
+
+        code {
+            font-family: 'BlenderPro', monospace;
+            background: rgba(57, 255, 20, 0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                color: #000;
+            }
+
+            body::before {
+                display: none;
+            }
+
+            .section {
+                border: 1px solid #ccc;
+            }
+
+            .event-title,
+            .section-title,
+            .competition-name {
+                -webkit-text-fill-color: initial;
+                background: none;
+                color: #333;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .event-title {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+
+            .event-details {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .section-content,
+            .competition-body {
+                padding: 15px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <img src="assets/images/purplechrome.png" alt="KNGINE Logo"
+                class="header-logo">
+            <h1 class="event-title">KNGINE'26</h1>
+            <p class="event-subtitle">// RULES & REGULATIONS //</p>
+            <p class="event-theme">WATCH DOGS: LEGION</p>
+            <div class="event-details">
+                <span>12th February 2026</span>
+                <span>8:00 AM - 1:30 PM</span>
+                <span>Richmond College, Galle</span>
+            </div>
+        </header>
+
+        <!-- ABOUT -->
+        <section class="section">
+            <div class="section-header"><span class="section-icon">ðŸ“¡</span>
+                <h2 class="section-title">About KNGINE'26</h2>
+            </div>
+            <div class="section-content">
+                <p style="color: var(--text-secondary); line-height: 1.8;"><strong
+                        style="color: var(--accent-cyan);">KNGINE'26</strong> is the annual Inter-School ICT Day
+                    organized by the <strong style="color: var(--accent-purple);">Richmond College IT Society
+                        (RITS)</strong>. This year's event embraces the <strong
+                        style="color: var(--accent-magenta);">Watch Dogs: Legion</strong> theme â€” hacktivism,
+                    resistance, and digital revolution. Join us as we unleash the power of technology through thrilling
+                    competitions.</p>
+                <div class="notice" style="margin-top: 20px;">
+                    <p class="notice-title">âš  VENUE</p>
+                    <p>C.W.W. Kannangara Multi-Purpose Auditorium, Richmond College, Galle</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COORDINATORS -->
+        <section class="section">
+            <div class="section-header"><span class="section-icon">ðŸ“ž</span>
+                <h2 class="section-title">Contact Coordinators</h2>
+            </div>
+            <div class="section-content">
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">For queries regarding registration or
+                    competitions:</p>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <p class="contact-name">Hirun Dilshan</p>
+                        <p class="contact-phone">+94 76 808 8170</p>
+                    </div>
+                    <div class="contact-card">
+                        <p class="contact-name">Rusiru Thamara</p>
+                        <p class="contact-phone">+94 70 365 2399</p>
+                    </div>
+                    <div class="contact-card">
+                        <p class="contact-name">Thilina Methsahan</p>
+                        <p class="contact-phone">+94 77 278 9984</p>
+                    </div>
+                    <div class="contact-card">
+                        <p class="contact-name">Semika Anusara</p>
+                        <p class="contact-phone">+94 76 266 5690</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GENERAL RULES -->
+        <section class="section">
+            <div class="section-header"><span class="section-icon">âš™ï¸</span>
+                <h2 class="section-title">General Rules & Regulations</h2>
+            </div>
+            <div class="section-content">
+                <ul class="rules-list">
+                    <li><strong>Eligibility:</strong> Open to all school students from <strong
+                            style="color: var(--accent-cyan);">Grade 9 to Grade 13</strong>.</li>
+                    <li><strong>Registration Deadline:</strong> All participants must register before <strong
+                            style="color: var(--accent-magenta);">8th February 2026</strong>.</li>
+                    <li><strong>Registration Fee:</strong> <strong style="color: var(--accent-green);">FREE</strong> for
+                        all competitions.</li>
+                    <li><strong>Identification:</strong> Participants must carry their school ID card on the event day.
+                    </li>
+                    <li><strong>Punctuality:</strong> Late arrivals may be disqualified at the discretion of the
+                        organizing committee.</li>
+                    <li><strong>Code of Conduct:</strong> All participants must maintain respectful behavior. Any form
+                        of misconduct, harassment, or unsportsmanlike behavior will result in immediate
+                        disqualification.</li>
+                    <li><strong>Plagiarism Policy:</strong> Zero tolerance for copying, using others' work, or any form
+                        of cheating. Violators will be disqualified and may be barred from future events.</li>
+                    <li><strong>AI Tools:</strong> Use of AI tools (ChatGPT, Copilot, GitHub Copilot, etc.) is <strong
+                            style="color: var(--accent-magenta);">STRICTLY PROHIBITED</strong> in all competitions
+                        unless explicitly stated otherwise.</li>
+                    <li><strong>Decision Authority:</strong> The judges' decision is <strong>FINAL and BINDING</strong>.
+                        No appeals will be entertained.</li>
+                    <li><strong>Theme Compliance:</strong> All submissions must align with the <strong
+                            style="color: var(--accent-purple);">Watch Dogs: Legion</strong> theme â€” featuring elements
+                        of hacking, resistance, surveillance, cyberpunk aesthetics, or digital revolution.</li>
+                    <li><strong>Disqualification:</strong> Teams/individuals may be disqualified for: cheating,
+                        plagiarism, late submissions, violation of rules, misconduct, or failure to follow instructions.
+                    </li>
+                    <li><strong>Technical Issues:</strong> The organizing committee is not responsible for any technical
+                        issues on the participant's end.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- REGISTRATION TABLE -->
+        <section class="section">
+            <div class="section-header"><span class="section-icon">ðŸ“</span>
+                <h2 class="section-title">Registration Information</h2>
+            </div>
+            <div class="section-content">
+                <table class="criteria-table">
+                    <thead>
+                        <tr>
+                            <th>Competition</th>
+                            <th>Registration Method</th>
+                            <th>Deadline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DesignerX (Graphic Design)</td>
+                            <td>Online Form + Submit Work</td>
+                            <td>8th Feb 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Codecom (Coding)</td>
+                            <td>Online Form</td>
+                            <td>8th Feb 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Web Development</td>
+                            <td>Online Form + Submit Work</td>
+                            <td>8th Feb 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Cyber Combat (Gaming)</td>
+                            <td>Online Form</td>
+                            <td>8th Feb 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Intellect (Quiz)</td>
+                            <td>Register at School</td>
+                            <td>12th Feb 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- COMPETITION DETAILS -->
+        <section class="section">
+            <div class="section-header"><span class="section-icon">ðŸ†</span>
+                <h2 class="section-title">Competition Details</h2>
+            </div>
+            <div class="section-content">
+
+                <!-- DESIGNERX -->
+                <div class="competition-card">
+                    <div class="competition-header">
+                        <h3 class="competition-name">ðŸŽ¨ DesignerX</h3><span class="competition-type">Individual â€¢ Online
+                            Submission</span>
+                    </div>
+                    <div class="competition-body">
+                        <p class="competition-desc">"Design is the silent ambassador of your resistance. Create visuals
+                            that hack the system."</p>
+
+                        <div class="topic-box">
+                            <h4 class="topic-title">THEME: Join the Resistance â€” DedSec Recruitment</h4>
+                            <p class="topic-desc">Design a recruitment poster for DedSec, the hacktivist group from
+                                Watch Dogs: Legion. Your design should inspire people to join the digital resistance
+                                against surveillance and oppression.</p>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">ELIGIBILITY</h4>
+                            <ul class="rules-list">
+                                <li>Open to individuals in grades 9-13.</li>
+                                <li>This is an individual competition, not for teams.</li>
+                                <li>No limitations on participants from a single school.</li>
+                                <li>Only <strong>ONE submission</strong> accepted per contestant.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">TECHNICAL REQUIREMENTS</h4>
+                            <ul class="rules-list">
+                                <li><strong>Software:</strong> Adobe Photoshop, Adobe Illustrator, Figma, Canva, or
+                                    GIMP.</li>
+                                <li><strong>Dimensions:</strong> A3 size (297mm Ã— 420mm) or 4:5 scale (1080 x 1350px).
+                                </li>
+                                <li>You must regularly capture screenshots of your work in progress.</li>
+                                <li>Templates and plagiarism are <strong>strictly prohibited</strong> â€” immediate
+                                    disqualification.</li>
+                                <li>Design must have consistent theme aligned with Watch Dogs: Legion aesthetics.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">SUBMISSION REQUIREMENTS</h4>
+                            <ul class="rules-list">
+                                <li>Submit all project files (textures, images, overlays) as a single <code>.zip</code>
+                                    file.</li>
+                                <li>Final artwork exported as <code>.png</code>, <code>.jpg</code>, or <code>.pdf</code>
+                                    (minimum 300 DPI).</li>
+                                <li>Include a PDF with layer screenshots + at least 5 in-progress screenshots.</li>
+                                <li><strong>File Naming:</strong> <code>DesignerX_SchoolName_YourName.zip</code></li>
+                                <li>Submit via official KNGINE'26 registration form.</li>
+                                <li>Submissions after deadline will <strong>NOT</strong> be accepted.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">JUDGING CRITERIA</h4>
+                            <table class="criteria-table">
+                                <tr>
+                                    <th>Criteria</th>
+                                    <th>Weightage</th>
+                                </tr>
+                                <tr>
+                                    <td>Creativity & Originality</td>
+                                    <td>25%</td>
+                                </tr>
+                                <tr>
+                                    <td>Theme Alignment (Watch Dogs: Legion)</td>
+                                    <td>25%</td>
+                                </tr>
+                                <tr>
+                                    <td>Visual Appeal & Aesthetics</td>
+                                    <td>20%</td>
+                                </tr>
+                                <tr>
+                                    <td>Technical Execution</td>
+                                    <td>20%</td>
+                                </tr>
+                                <tr>
+                                    <td>Presentation & Documentation</td>
+                                    <td>10%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CODECOM -->
+                <div class="competition-card">
+                    <div class="competition-header">
+                        <h3 class="competition-name">ðŸ’» Codecom</h3><span class="competition-type">Individual â€¢
+                            Online</span>
+                    </div>
+                    <div class="competition-body">
+                        <p class="competition-desc">"Every line of code is a weapon. Hack the challenge. Own the
+                            leaderboard."</p>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">ELIGIBILITY</h4>
+                            <ul class="rules-list">
+                                <li>Students from grade 9-13 can participate.</li>
+                                <li>This competition is only for <strong>individuals</strong>, not teams.</li>
+                                <li>Solutions must be original. Code plagiarism = disqualification.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">COMPETITION FORMAT</h4>
+                            <ul class="rules-list">
+                                <li><strong>Platform:</strong> Online coding platform (link shared after registration).
+                                </li>
+                                <li><strong>Duration:</strong> Set time limit to solve all problems (announced before
+                                    event).</li>
+                                <li><strong>Languages:</strong> Python, C++, JavaScript, Java, or C only.</li>
+                                <li><strong>Problem Difficulty:</strong> Easy, Medium, and Hard questions.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">RULES</h4>
+                            <ul class="rules-list">
+                                <li>Must be registered via Google Form to participate.</li>
+                                <li>Each problem has test cases; score based on passed test cases.</li>
+                                <li>Multiple submissions allowed â€” highest score counted.</li>
+                                <li>Ranking by total score. Ties broken by submission time.</li>
+                                <li>No penalty for wrong submissions.</li>
+                                <li>AI tools, code generators, external help = <strong>STRICTLY PROHIBITED</strong>.
+                                </li>
+                                <li>Standard language documentation is allowed.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">JUDGING CRITERIA</h4>
+                            <table class="criteria-table">
+                                <tr>
+                                    <th>Criteria</th>
+                                    <th>Weightage</th>
+                                </tr>
+                                <tr>
+                                    <td>Correctness of Solution</td>
+                                    <td>40%</td>
+                                </tr>
+                                <tr>
+                                    <td>Code Efficiency & Optimization</td>
+                                    <td>30%</td>
+                                </tr>
+                                <tr>
+                                    <td>Time Taken to Solve</td>
+                                    <td>20%</td>
+                                </tr>
+                                <tr>
+                                    <td>Code Readability</td>
+                                    <td>10%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WEB DEVELOPMENT -->
+                <div class="competition-card">
+                    <div class="competition-header">
+                        <h3 class="competition-name">ðŸŒ Web Development</h3><span class="competition-type">Team (2-4
+                            Members) â€¢ Online Submission</span>
+                    </div>
+                    <div class="competition-body">
+                        <p class="competition-desc">"Build the digital resistance. Your website is the battleground."
+                        </p>
+
+                        <div class="topic-box">
+                            <h4 class="topic-title">TASK: Develop a DedSec Operations Dashboard</h4>
+                            <p class="topic-desc">Create a futuristic web interface for hacktivist operatives featuring
+                                cyberpunk aesthetics, mission briefings, operative profiles, surveillance feeds, or
+                                resistance updates.</p>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">ELIGIBILITY</h4>
+                            <ul class="rules-list">
+                                <li>Students from grade 9-13 can participate.</li>
+                                <li><strong>Team size:</strong> 2 to 4 members per team.</li>
+                                <li>Projects must be original. Plagiarism = disqualification.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">TECHNICAL REQUIREMENTS</h4>
+                            <ul class="rules-list">
+                                <li><strong>Technologies:</strong> HTML, CSS, JavaScript. Frameworks (React, Vue,
+                                    Bootstrap, Tailwind) allowed.</li>
+                                <li>Use descriptive variable/function names. Include comments for readability.</li>
+                                <li>Upload code to a public GitHub repository.</li>
+                                <li>Commit changes regularly to track progress.</li>
+                                <li>Backend not required but awards <strong>extra points</strong>.</li>
+                                <li>Extra points for <strong>responsiveness</strong> and additional functionalities.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">SUBMISSION REQUIREMENTS</h4>
+                            <ul class="rules-list">
+                                <li>Complete source code in a ZIP file.</li>
+                                <li>Hosted link (GitHub Pages, Netlify, Vercel) â€” highly recommended.</li>
+                                <li>README file with team details and setup instructions.</li>
+                                <li><strong>File Naming:</strong> <code>WebDev_SchoolName_TeamName.zip</code></li>
+                                <li>Only <strong>FIRST submitted version</strong> will be evaluated.</li>
+                                <li>Submissions after deadline will <strong>NOT</strong> be accepted.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">JUDGING CRITERIA</h4>
+                            <table class="criteria-table">
+                                <tr>
+                                    <th>Criteria</th>
+                                    <th>Weightage</th>
+                                </tr>
+                                <tr>
+                                    <td>Functionality</td>
+                                    <td>25%</td>
+                                </tr>
+                                <tr>
+                                    <td>Design & User Experience</td>
+                                    <td>25%</td>
+                                </tr>
+                                <tr>
+                                    <td>Theme Alignment & Creativity</td>
+                                    <td>20%</td>
+                                </tr>
+                                <tr>
+                                    <td>Code Architecture & Cleanliness</td>
+                                    <td>15%</td>
+                                </tr>
+                                <tr>
+                                    <td>Responsiveness</td>
+                                    <td>15%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CYBER COMBAT -->
+                <div class="competition-card">
+                    <div class="competition-header">
+                        <h3 class="competition-name">ðŸŽ® Cyber Combat</h3><span class="competition-type">Team (5 Players)
+                            â€¢ Online</span>
+                    </div>
+                    <div class="competition-body">
+                        <p class="competition-desc">"The battlefield is digital. The stakes are real. Show no mercy."
+                        </p>
+
+                        <div class="topic-box">
+                            <h4 class="topic-title">GAME: VALORANT</h4>
+                            <p class="topic-desc">5v5 Tactical Shooter â€” Tournament bracket style competition.</p>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">TEAM ELIGIBILITY</h4>
+                            <ul class="rules-list">
+                                <li>Open to all school students.</li>
+                                <li>Teams: <strong>5 main players</strong> from the same school.</li>
+                                <li>Optional: 1 substitute (not mandatory).</li>
+                                <li>All team members must provide names and details during registration.</li>
+                                <li>Team members cannot be changed on match day unless pre-approved.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">REGISTRATION RULES</h4>
+                            <ul class="rules-list">
+                                <li>Players must use their <strong>own Valorant accounts</strong>. No account sharing.
+                                </li>
+                                <li>Register with team name + full names + Riot IDs of all players.</li>
+                                <li>Registration must be completed by deadline.</li>
+                                <li>All registered players must be present on tournament day.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">MATCH FORMAT</h4>
+                            <ul class="rules-list">
+                                <li><strong>Game Mode:</strong> 5v5, Unrated.</li>
+                                <li>Best of 1 or Best of 3 depending on stage.</li>
+                                <li><strong>Map Selection:</strong> Teams participate in map banning phase.</li>
+                                <li>First team to win <strong>13 rounds</strong> wins. Overtime if tied (12-12).</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">CODE OF CONDUCT</h4>
+                            <ul class="rules-list">
+                                <li>No toxicity, abusive language, or harassment tolerated.</li>
+                                <li>Cheating/hacking of any kind = <strong>immediate disqualification</strong>.</li>
+                                <li>Sportsmanship mandatory. Respect opponents and teammates.</li>
+                                <li>Teams must arrive <strong>15 minutes before</strong> scheduled match.</li>
+                                <li>Failure to show within 10 minutes = match forfeited.</li>
+                            </ul>
+                        </div>
+
+                        <div class="notice">
+                            <p class="notice-title">ðŸ“… TOURNAMENT SCHEDULE</p>
+                            <p>Tournament bracket and match schedule will be shared after registration closes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INTELLECT -->
+                <div class="competition-card">
+                    <div class="competition-header">
+                        <h3 class="competition-name">ðŸ§  Intellect</h3><span class="competition-type">Team (3 Members) â€¢
+                            On-Site</span>
+                    </div>
+                    <div class="competition-body">
+                        <p class="competition-desc">"Knowledge is power. Intelligence is your greatest hack."</p>
+
+                        <div class="topic-box">
+                            <h4 class="topic-title">INTER-SCHOOL IT & TECH QUIZ COMPETITION</h4>
+                            <p class="topic-desc">Test your knowledge in ICT, programming, cybersecurity, and the world
+                                of Watch Dogs: Legion!</p>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">ELIGIBILITY</h4>
+                            <ul class="rules-list">
+                                <li>Each school allowed to send <strong>ONE team</strong>.</li>
+                                <li><strong>Team size:</strong> Maximum 3 students per team.</li>
+                                <li>All team members must be students at the participating school.</li>
+                                <li><strong>Registration:</strong> Register at your school (not online). Deadline: 6th
+                                    Feb 2026.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">COMPETITION ROUNDS</h4>
+                            <ul class="rules-list">
+                                <li><strong>Round 1 (Written MCQ - Elimination):</strong> Multiple Choice + Short
+                                    Answer. Top teams advance.</li>
+                                <li><strong>Round 2 (Rapid Fire):</strong> Quick questions with time limits.</li>
+                                <li><strong>Round 3 (Buzzer Round - Finals):</strong> Top teams compete in buzzer
+                                    format.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">TOPICS COVERED</h4>
+                            <ul class="rules-list">
+                                <li>A/L and O/L ICT syllabus</li>
+                                <li>Programming concepts</li>
+                                <li>Cybersecurity basics</li>
+                                <li>Tech industry & current affairs</li>
+                                <li>Famous tech personalities & companies</li>
+                                <li>Watch Dogs: Legion themed questions</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">RULES</h4>
+                            <ul class="rules-list">
+                                <li>No cheating or consulting external resources.</li>
+                                <li>Mobile phones, smartwatches, electronic devices = <strong>STRICTLY
+                                        PROHIBITED</strong>.</li>
+                                <li>Participants must remain silent when not answering.</li>
+                                <li>Shouting answers out of turn = negative marking.</li>
+                                <li>Each question has a time limit. Late answers not considered.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h4 class="subsection-title">SCORING</h4>
+                            <table class="criteria-table">
+                                <tr>
+                                    <th>Round</th>
+                                    <th>Points</th>
+                                </tr>
+                                <tr>
+                                    <td>Round 1 (MCQ)</td>
+                                    <td>+1 per correct (no negative)</td>
+                                </tr>
+                                <tr>
+                                    <td>Round 2 (Rapid Fire)</td>
+                                    <td>+2 per correct</td>
+                                </tr>
+                                <tr>
+                                    <td>Round 3 (Buzzer)</td>
+                                    <td>+5 correct / -2 wrong</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PRIZES -->
+        <section class="section">
+            <div class="section-header"><span class="section-icon">ðŸŽ–ï¸</span>
+                <h2 class="section-title">Prizes & Recognition</h2>
+            </div>
+            <div class="section-content">
+                <ul class="rules-list">
+                    <li><strong>Certificates:</strong> All winners receive official certificates from RITS.</li>
+                    <li><strong>Positions:</strong> 1st, 2nd, and 3rd place recognized for each competition.</li>
+                    <li><strong>Participation:</strong> E-certificates for all participants.</li>
+                </ul>
+                <div class="notice">
+                    <p class="notice-title">ðŸŽ¯ PRIZE DISTRIBUTION</p>
+                    <p>Prize distribution and award ceremony at main event on 11th February 2026.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCLAIMER -->
+        <section class="section">
+            <div class="section-header"><span class="section-icon">âš ï¸</span>
+                <h2 class="section-title">Disclaimer</h2>
+            </div>
+            <div class="section-content">
+                <ul class="rules-list">
+                    <li>The organizing committee reserves the right to modify rules without prior notice.</li>
+                    <li>Updates will be communicated through official channels.</li>
+                    <li>By registering, participants agree to abide by all rules.</li>
+                    <li>Judges' decisions are <strong>FINAL and BINDING</strong>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <img src="assets/images/RITS LOGO_Regularr.png" alt="RITS Logo"
+                class="footer-logo">
+            <p class="footer-text">// ORGANIZED BY //</p>
+            <p class="footer-brand">RICHMOND COLLEGE IT SOCIETY</p>
+            <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.85rem;">Richmond College, Galle, Sri
+                Lanka</p>
+            <p
+                style="color: var(--accent-purple); margin-top: 25px; font-family: 'Hacked', sans-serif; font-size: 0.9rem; letter-spacing: 2px;">
+                &lt;/KNGINE'26&gt; â€” JOIN THE RESISTANCE</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
