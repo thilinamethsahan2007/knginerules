@@ -381,9 +381,15 @@
         }
 
         @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
             body {
-                background: #fff;
-                color: #000;
+                background: var(--primary-dark) !important;
+                color: var(--text-primary) !important;
             }
 
             body::before {
@@ -391,15 +397,44 @@
             }
 
             .section {
-                border: 1px solid #ccc;
+                background: var(--secondary-dark) !important;
+                border: 1px solid rgba(0, 212, 255, 0.2) !important;
             }
 
-            .event-title,
-            .section-title,
-            .competition-name {
-                -webkit-text-fill-color: initial;
-                background: none;
-                color: #333;
+            .section::before {
+                background: linear-gradient(180deg, #00d4ff, #9d4edd, #ff006e) !important;
+            }
+
+            .section-header {
+                background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), transparent) !important;
+            }
+
+            .competition-card {
+                background: rgba(0, 0, 0, 0.3) !important;
+            }
+
+            .competition-header {
+                background: linear-gradient(90deg, rgba(157, 78, 221, 0.2), transparent) !important;
+            }
+
+            .contact-card {
+                background: rgba(0, 0, 0, 0.3) !important;
+            }
+
+            .criteria-table th {
+                background: rgba(0, 212, 255, 0.1) !important;
+            }
+
+            .criteria-table td {
+                background: rgba(0, 0, 0, 0.2) !important;
+            }
+
+            .topic-box {
+                background: rgba(0, 212, 255, 0.05) !important;
+            }
+
+            .notice {
+                background: linear-gradient(90deg, rgba(255, 0, 110, 0.1), transparent) !important;
             }
         }
 
@@ -427,8 +462,7 @@
 
         <!-- HEADER -->
         <header class="header">
-            <img src="assets/images/purplechrome.png" alt="KNGINE Logo"
-                class="header-logo">
+            <img src="assets/images/purplechrome.png" alt="KNGINE Logo" class="header-logo">
             <h1 class="event-title">KNGINE'26</h1>
             <p class="event-subtitle">// RULES & REGULATIONS //</p>
             <p class="event-theme">WATCH DOGS: LEGION</p>
@@ -1011,8 +1045,7 @@
 
         <!-- FOOTER -->
         <footer class="footer">
-            <img src="assets/images/RITS LOGO_Regularr.png" alt="RITS Logo"
-                class="footer-logo">
+            <img src="assets/images/RITS LOGO_Regularr.png" alt="RITS Logo" class="footer-logo">
             <p class="footer-text">// ORGANIZED BY //</p>
             <p class="footer-brand">RICHMOND COLLEGE IT SOCIETY</p>
             <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.85rem;">Richmond College, Galle, Sri
